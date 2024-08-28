@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small and Big Tags</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background: linear-gradient(#DDDBEF, #DDDBEF);
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    body::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(248, 149, 195, 0.3);
+      position: absolute;
+      z-index: -1;
+      clip-path: circle(40% at right 70%);
+    }
+
+    .container {
+      background-color: #FFFFFF;
+      width: 80%;
+      height: 80%;
+      border-radius: 50px;
+      position: relative; /* Ensure it stays in place */
+
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      padding: 10px 10px;
+      position: relative; /* Ensure positioning works */
+    }
+
+    .logo {
+      color: #AB8399;
+      text-decoration: none;
+      font-size: 40px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      position: relative;
+      top: -30px;
+      right:20px;/* Adjust this value to move the logo up */
+      font-family: 'Dancing Script', cursive;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #AB8399;
+      text-decoration: none;
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    nav ul li a:hover {
+      color: #F895C3;
+    }
+ #eye{
+   width: 300px; /* Resize the image width */
+   height: auto; /* Maintain aspect ratio */
+   position: absolute; /* Positioning to move the image */
+   top: 50px; /* Adjust top positioning */
+   left: 900px; /* Adjust left positioning */
+ }
+
+
+    .content h2 {
+      color: #AB8399;
+      width: 40%;
+      font-size: 35px;
+      font-weight: 600;
+      font-family: SimSun-ExtB;
+      margin-top: 80px; /* Adjust the value as needed */
+
+    }
+
+    .content p {
+      color:#AB8399;
+      width:60%;
+      font-size:25px;
+
+      font-family: "Copperplate Gothic Bold";
+    }
+
+
+  </style>
+</head>
+
+<body>
+<div class="container"   >
+<nav>
+  <a href="#"  class="logo">SHEGLAM</a>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Lips</a></li>
+    <li><a href="#">Face</a></li>
+    <li><a href="#">Eyes</a></li>
+  </ul>
+</nav>
+  <nav class="content">
+    <div>
+      <h2>Glow Like <br>Never Before</h2>
+      <br>
+      <br>
+      <p>Transform your routine with luxurious skincare and makeup that celebrate your unique beauty.</p>
+    </div>
+  </nav>
+
+  <img  id="eye" src="img/1.png"  >
+
+</div>
+
+</body>
+</html>
